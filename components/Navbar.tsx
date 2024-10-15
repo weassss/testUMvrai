@@ -103,10 +103,10 @@ function QuickSearch() {
                       <Link href="/">Accueil</Link>
                     </CommandItem>
                     <CommandItem>
-                      <Link href="/products">Produits</Link>
+                      <Link href="/catalogue">Produits</Link>
                     </CommandItem>
                     <CommandItem>
-                      <Link href="/services">Services</Link>
+                      <Link href="/services">Produits & Services</Link>
                     </CommandItem>
                     <CommandItem>
                       <Link href="/about">À propos</Link>
@@ -118,7 +118,7 @@ function QuickSearch() {
                       <Link href="/jobs">Emplois</Link>
                     </CommandItem>
                     <CommandItem>
-                      <Link href="/contact">Contact</Link>
+                      <Link href="/contact">Nous Joindre</Link>
                     </CommandItem>
                   </CommandGroup>
                 </AccordionContent>
@@ -188,7 +188,7 @@ function CartSheet() {
           {cartItems.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full">
               <p className="text-muted-foreground mb-4">Il n'y a aucun article dans votre panier.</p>
-              <Link href="/products" passHref>
+              <Link href="/catalogue" passHref>
                 <Button>
                   Voir nos produits
                 </Button>
@@ -231,11 +231,16 @@ function LanguageSwitch() {
 function MobileMenu() {
   return (
     <Sheet>
+      <div className="md:hidden mt-6">
+          <QuickSearch />
+        </div>
       <SheetTrigger asChild>
+        
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu className="h-6 w-6" />
           <span className="sr-only">Ouvrir le menu</span>
         </Button>
+        
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] sm:w-[400px]">
         <SheetHeader>
@@ -247,14 +252,14 @@ function MobileMenu() {
               <Button variant="ghost" className="w-full justify-start">Accueil</Button>
             </SheetClose>
           </Link>
-          <Link href="/products" passHref>
+          <Link href="/catalogue" passHref>
             <SheetClose asChild>
-              <Button variant="ghost" className="w-full justify-start">Produits</Button>
+              <Button variant="ghost" className="w-full justify-start">Catalogue</Button>
             </SheetClose>
           </Link>
           <Link href="/services" passHref>
             <SheetClose asChild>
-              <Button variant="ghost" className="w-full justify-start">Services</Button>
+              <Button variant="ghost" className="w-full justify-start">Produits & Services</Button>
             </SheetClose>
           </Link>
           <Link href="/about" passHref>
@@ -274,13 +279,11 @@ function MobileMenu() {
           </Link>
           <Link href="/contact" passHref>
             <SheetClose asChild>
-              <Button variant="ghost" className="w-full justify-start">Contact</Button>
+              <Button variant="ghost" className="w-full justify-start">Nous Joindre</Button>
             </SheetClose>
           </Link>
         </nav>
-        <div className="mt-6">
-          <QuickSearch />
-        </div>
+
       </SheetContent>
     </Sheet>
   )
@@ -293,20 +296,20 @@ export default function Component() {
         <div className="container mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center mr-4">
             <Image
-              src="/placeholder.svg?height=40&width=100"
-              alt="Umallette Manufacturing Logo"
-              width={100}
-              height={40}
-              className="h-10 w-auto"
+              src="/logoUM.png?height=40&width=100"
+              alt="UM Logo"
+              width={50}
+              height={20}
+              className="h-8 w-auto"
             />
           </Link>
           <div className="hidden md:flex items-center space-x-4 flex-grow mx-4">
             <div className="flex items-center space-x-4">
-              <Link href="/products" passHref>
-                <Button variant="ghost">Produits</Button>
+              <Link href="/catalogue" passHref>
+                <Button variant="ghost">Catalogue</Button>
               </Link>
               <Link href="/services" passHref>
-                <Button variant="ghost">Services</Button>
+                <Button variant="ghost">Produits & Services</Button>
               </Link>
               <Link href="/about" passHref>
                 <Button variant="ghost">À propos</Button>
@@ -318,7 +321,7 @@ export default function Component() {
                 <Button variant="ghost">Emplois</Button>
               </Link>
               <Link href="/contact" passHref>
-                <Button variant="ghost">Contact</Button>
+                <Button variant="ghost">Nous Joindre</Button>
               </Link>
             </div>
             <div className="flex-grow">

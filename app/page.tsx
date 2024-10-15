@@ -9,11 +9,107 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ChevronRight } from 'lucide-react'
 
 const clients = [
-  { logo: '/placeholder.svg?height=100&width=200&text=Client+1', name: 'Client 1' },
-  { logo: '/placeholder.svg?height=100&width=200&text=Client+2', name: 'Client 2' },
-  { logo: '/placeholder.svg?height=100&width=200&text=Client+3', name: 'Client 3' },
-  { logo: '/placeholder.svg?height=100&width=200&text=Client+4', name: 'Client 4' },
+  { logo: '/media/cocacola.png?height=100&width=200&text=Client+1', name: 'Client 1' },
+  { logo: '/media/Nestle.png?height=100&width=200&text=Client+2', name: 'Client 2' },
+  { logo: '/media/pepsi.png?height=100&width=200&text=Client+3', name: 'Client 3' },
+  { logo: '/media/Danone.png?height=100&width=200&text=Client+4', name: 'Client 4' },
 ]
+
+const logos = [
+  {
+    name: 'Pepsi',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_01a05e86699746a38d7f4465ba9ac68f~mv2-QF2spuy8P6OCPuYrTeoSvsMOOex97V.png',
+  },
+  {
+    name: 'Plastipak',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_06022910383b4c1d953ddde610347896~mv2-QVlozE8jlGQ3VwWr5N4AWauQZ3zKDT.png',
+  },
+  {
+    name: 'Lassonde',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_324777a854fa4382862c11c850e5a6b1~mv2-Qw81L5l0yWNzDLS2olJOdruVocIdpr.png',
+  },
+  {
+    name: 'Eska',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_48d1721cab0c476baea2a3745b1d5f1a~mv2-8D8FUr9JbtLqsmnDy9CylNGxkegwb4.png',
+  },
+  {
+    name: 'Amcor',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_4b11cabb0b7047258668e2287ca482f3~mv2-FcntqQw1kNtWsxtqdPfF9v0hM7HD8W.png',
+  },
+  {
+    name: 'Coca-Cola',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_8f9f635aec944e669f094f82bd907079~mv2-1Rgy8yaguGjQpeGcX94zsNwXMnreev.png',
+  },
+  {
+    name: 'Refresco',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_9106672ef65e4686b8df97a2ee175438~mv2-sIBcPgiYDI704dqDUjgAbbK5bRNRsa.png',
+  },
+  {
+    name: 'Ocean Spray',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_99ada941dd464de1bf1fdf24c1a5df81~mv2-PGNYyReTIgqnvvkZiCGMxSLb4Jr2AH.png',
+  },
+  {
+    name: 'Nestlé',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_a032621654554d0ab98b25c9c4887e6a~mv2-kQICZRTzHqcEIoYjTi1WW7B0jKM9xK.png',
+  },
+  {
+    name: 'Danone',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_b48fbd3ed8dc433782c37c1ebec6b08b~mv2-IBpJJdrRbFpzHs0wuOrBn0extm2Xx1.png',
+  },
+  {
+    name: 'Ice River',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_c443204834c44adb9cf6776ba9a6c132~mv2-sQhQDXxynAK1RVueJruAwGGIIDNjIn.png',
+  },
+  {
+    name: 'Graham Packaging',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_cae8a0adacd84721bb5fc4c7c5e6c593~mv2-m8r7zwNVVUGxguewQ2s7VpSBwhsQMj.png',
+  },
+  {
+    name: 'Niagara',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_ddb72225923845b38710dfcc223807a4~mv2-iof79htVLZgSx7lEJSZbmQeLaKH0Dr.png',
+  },
+  {
+    name: 'Silgan Plastics',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_ebe6b632b46945d4bc10bec8d18b5e16~mv2-LmTPSnYTSydi0Ov7CRuDTiItwNYp1i.png',
+  },
+  {
+    name: 'Naya',
+    url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1c5951_f6defce4d5c04af187e699e60dc4ac5f~mv2-xUM8cjlaR6TgBXNyYDlE44v8Yar2k9.png',
+  },
+  
+
+]
+
+const AnimatedLogoCloud = () => {
+  return (
+    <div className="w-full py-12">
+      <div className="mx-auto w-full px-4 md:px-8">
+        <div
+          className="group relative mt-6 flex gap-6 overflow-hidden p-2"
+        >
+          {Array(5)
+            .fill(null)
+            .map((_, index) => (
+              <div
+                key={index}
+                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
+              >
+                {logos.map((logo, key) => (
+                  <img
+                    key={key}
+                    src={logo.url}
+                    className="h-10 w-28 px-2 brightness-0 dark:invert"
+                    alt={`${logo.name}`}
+                  />
+                ))}
+              </div>
+            ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 
 const stats = [
   { number: '7', label: 'Partenaires' },
@@ -24,7 +120,7 @@ const stats = [
 
 export default function Home() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-  const videos = ['/video1.mp4', '/video2.mp4', '/video3.mp4'] // Replace with actual video URLs
+  const videos = ['/herogirl.mp4', '/gravur.mp4', '/turbune200.mp4'] 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -86,11 +182,11 @@ export default function Home() {
           >
             Pourquoi nous choisir ?
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
             {[
-              { title: "Expertise", description: "Plus de 47 ans d'expérience dans l'industrie" },
-              { title: "Innovation", description: "Solutions de pointe pour la fabrication moderne" },
-              { title: "Fiabilité", description: "Performance constante et support client exceptionnel" }
+              { title: "Expertise", description: "Plus de 47 ans d'expérience dans l'industrie", vd:"gravur"},
+              { title: "Innovation", description: "Solutions de pointe pour la fabrication moderne", vd:"iconecontenant" },
+              { title: "Fiabilité", description: "Performance constante et support client exceptionnel", vd:"iconeboutille" }
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -102,7 +198,7 @@ export default function Home() {
                 <Card>
                   <CardContent className="p-6">
                     <Image
-                      src={`/placeholder.svg?height=200&width=300&text=${feature.title}`}
+                      src={`/${feature.vd}.mp4?&text=${feature.title}`}
                       alt={feature.title}
                       width={300}
                       height={200}
@@ -130,27 +226,7 @@ export default function Home() {
           >
             Nos Clients
           </motion.h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {clients.map((client, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={200}
-                  height={100}
-                  className="mb-4"
-                />
-                <p className="text-center font-semibold">{client.name}</p>
-              </motion.div>
-            ))}
-          </div>
+          <AnimatedLogoCloud />
         </div>
       </section>
 
@@ -190,6 +266,60 @@ export default function Home() {
           >
             Leader dans l'innovation manufacturière depuis près de cinq décennies
           </motion.p>
+        </div>
+      </section>
+
+      {/* Missions and Values Section */}
+      <section className="py-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2 
+            className="text-4xl font-bold mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Nos Missions et Valeurs
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold mb-4">Notre Mission</h3>
+              <p className="text-gray-600 mb-4">Par des relations fortes, nous sommes fiers d'offrir des solutions innovantes qui simplifient la vie de nos clients pour l’industrie de l’embouteillage.</p>
+              <Image
+                src="/placeholder.svg?height=300&width=500&text=Notre+Mission"
+                alt="Notre Mission"
+                width={500}
+                height={300}
+                className="rounded"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold mb-4">Nos Valeurs</h3>
+              <ul className="list-disc list-inside text-gray-600 mb-4">
+                <li>Engagement envers la satisfaction client</li>
+                <li>Innovation constante</li>
+                <li>Qualité sans compromis</li>
+                <li>Intégrité dans toutes nos actions</li> 
+              </ul>
+              <Image
+                src="/placeholder.svg?height=300&width=500&text=Nos+Valeurs"
+                alt="Nos Valeurs"
+                width={500}
+                height={300}
+                className="rounded"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -167,15 +167,19 @@ const Services = () => {
   const serviceImages = [
     {
       imageNumber: 1,
-      imageSource: '/placeholder.svg?height=600&width=800&text=Services+d\'Ingenierie',
+      imageSources: [
+        '/media/blob.png?height=600&width=800&text=Services+d\'Ingénierie',
+        '/media/blob2.png?height=600&width=800&text=Services+d\'Ingénierie+1.2',
+        '/media/blob3.png?height=600&width=800&text=Services+d\'Ingénierie+1.3',
+      ]
     },
     {
       imageNumber: 2,
-      imageSource: '/placeholder.svg?height=600&width=800&text=Services+de+Scan+3D',
+      imageSources: ['/placeholder.svg?height=600&width=800&text=Services+de+Scan+3D'],
     },
     {
       imageNumber: 3,
-      imageSource: '/placeholder.svg?height=600&width=800&text=Services+d\'Impression+3D',
+      imageSources: ['/placeholder.svg?height=600&width=800&text=Services+d\'Impression+3D'],
     },
   ]
 
@@ -193,7 +197,7 @@ const Services = () => {
       <div className="mx-auto max-w-6xl">
         <h2 className="text-3xl font-bold mb-12 text-center">Nos Services en Action</h2>
         <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
-          Découvrez comment les services d'Umallette peuvent transformer votre processus de fabrication et améliorer votre efficacité opérationnelle.
+          Découvrez comment les services d'UM peuvent transformer votre processus de fabrication et améliorer votre efficacité opérationnelle.
         </p>
         <div className="service-navigation mb-12 flex w-full items-center justify-center text-center">
           <div className="flex w-full max-w-4xl flex-col gap-2 md:flex-row">
@@ -229,17 +233,17 @@ const Services = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg border bg-white shadow-sm">
-            {serviceImages.map((image, index) => (
-              <div key={index} data-image-number={image.imageNumber}>
-                {activeService === image.imageNumber && (
+            {serviceImages.map((service, index) => (
+              <div key={index} data-image-number={service.imageNumber}>
+                {activeService === service.imageNumber && (
                   <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="w-full rounded-lg"
                   >
                     <Image
-                      src={image.imageSource}
-                      alt={`Service ${image.imageNumber}`}
+                      src={service.imageSources[activeService === 1 ? activeStep : 0]}
+                      alt={`Service ${service.imageNumber}`}
                       width={800}
                       height={600}
                       className="w-full rounded-lg"

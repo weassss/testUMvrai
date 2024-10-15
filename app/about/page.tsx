@@ -7,7 +7,7 @@ import { Facebook, Twitter, Linkedin } from 'lucide-react'
 
 export default function About() {
   const timelineEvents = [
-    { year: 1976, event: 'Umallette Manufacturing founded' },
+    { year: 1976, event: 'UM Manufacturing founded' },
     { year: 1985, event: 'Expanded operations to include CNC machining' },
     { year: 1995, event: 'Opened first international office' },
     { year: 2005, event: 'Launched innovative product line' },
@@ -27,12 +27,12 @@ export default function About() {
       {/* Who We Are Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center">About Umallette Manufacturing</h1>
+          <h1 className="text-4xl font-bold mb-8 text-center">About UM</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
               <p className="mb-4">
-                Umallette Manufacturing is a leading innovator in the manufacturing industry, 
+                UM is a leading innovator in the manufacturing industry, 
                 providing cutting-edge solutions for businesses worldwide. With over four decades 
                 of experience, we've established ourselves as a trusted partner for companies 
                 seeking to optimize their manufacturing processes.
@@ -46,8 +46,8 @@ export default function About() {
             </div>
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=600&text=Umallette+Manufacturing"
-                alt="Umallette Manufacturing Facility"
+                src="/placeholder.svg?height=400&width=600&text=UM+Manufacturing"
+                alt="UM Manufacturing Facility"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
