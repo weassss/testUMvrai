@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-8 text-center">
-        <p>&copy; 2023 Showcase Website. All rights reserved.</p>
+        <p>&copy; bo site par lulu.</p>
       </div>
     </footer>
   );
