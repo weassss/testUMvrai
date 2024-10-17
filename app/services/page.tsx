@@ -318,9 +318,9 @@ const Services = () => {
 
 const OurMachines = () => {
   const machines = [
-    { name: "Machine CNC", image: "/placeholder.svg?height=300&width=400&text=Machine+CNC", description: "Usinage de précision pour pièces complexes" },
-    { name: "Robot de soudage", image: "/placeholder.svg?height=300&width=400&text=Robot+de+Soudage", description: "Soudage automatisé pour une qualité constante" },
-    { name: "Imprimante 3D industrielle", image: "/placeholder.svg?height=300&width=400&text=Imprimante+3D", description: "Prototypage rapide et production de petites séries" },
+    { name: "EQUIPEMENT CNC", image: "/placeholder.svg?height=300&width=400&text=Machine+CNC", description: "Usinage de précision pour pièces complexes" },
+    { name: "EQUIPEMENT CONVENTIONNEL", image: "/placeholder.svg?height=300&width=400&text=Robot+de+Soudage", description: "Soudage automatisé pour une qualité constante" },
+    { name: "QUALITE ET NORMES ISO", image: "/placeholder.svg?height=300&width=400&text=Imprimante+3D", description: "Prototypage rapide et production de petites séries" },
     { name: "Système de convoyage", image: "/placeholder.svg?height=300&width=400&text=Systeme+de+Convoyage", description: "Transport efficace des matériaux et produits" },
   ]
 
