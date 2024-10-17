@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Facebook, Twitter, Linkedin } from 'lucide-react'
+import { Timeline } from "@/components/ui/timeline";
+import React from "react";
 
 export default function About() {
   const timelineEvents = [
